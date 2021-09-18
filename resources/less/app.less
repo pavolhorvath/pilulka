@@ -1,0 +1,132 @@
+@colorBackground: #1a1f2b;
+@colorDefault: #eeeeee;
+@colorTitle: #c0d0f5;
+@colorNonAction: #8d8d8d;
+@colorSaveAction: #758bc2;
+@colorRemoveAction: #8e4949;
+@font: "Open Sans", "SansSerif", "Arial";
+
+@block: {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: @font;
+  background: @colorBackground;
+  color: @colorDefault;
+  height: 100%;
+}
+
+.app-wrapper {
+  text-align: center;
+
+  .button {
+    @block();
+    background: @colorTitle;
+    cursor: pointer;
+    transition: 0.6s all;
+    color: @colorBackground;
+    font-weight: bold;
+    &:hover {
+      background: lighten(@colorTitle, 10);
+    }
+  }
+
+  input {
+    background: none;
+    border: @colorTitle solid 1px;
+    font-family: courier;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: @colorDefault;
+    margin: 0 5px;
+    font-size: large;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .tweet-settings-wrapper {
+    padding: 10px;
+    .key-words-wrapper {
+      @block();
+      display: inline-block;
+      width: 550px;
+      background: lighten(@colorBackground, 10);
+      margin: 5px;
+      text-align: left;
+
+      .key-word-wrapper {
+        @block();
+        display: inline-block;
+        background: lighten(@colorBackground, 20);
+        margin: 5px;
+        .key-word-remove {
+          margin-left: 5px;
+          cursor: pointer;
+          transition: 0.6s all;
+          &:hover {
+            color: darken(@colorDefault, 30);
+          }
+        }
+      }
+    }
+
+    .key-word-input-wrapper,
+    .tweets-count-wrapper,
+    .get-tweets-button-wrapper {
+      margin: 10px;
+    }
+  }
+
+  .tweets-wrapper {
+    width: 600px;
+    margin: auto;
+
+    .tweet-wrapper {
+      background: lighten(@colorBackground, 10);
+      margin: 5px 20px;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: left;
+
+      .tweet-author {
+        display: block;
+        border-bottom: @colorTitle solid 1px;
+        font-weight: bold;
+        color: @colorTitle;
+        margin-bottom: 10px;
+      }
+
+      .tweet-created {
+        display: block;
+        text-align: right;
+        margin-top: 10px;
+        color: @colorNonAction;
+        font-style: italic;
+      }
+    }
+  }
+
+  #loader {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: fade(@colorDefault, 20%);
+
+    img {
+      width: 50px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+}

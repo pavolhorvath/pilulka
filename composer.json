@@ -1,0 +1,6 @@
+{
+    "require": {
+        "eftec/bladeone": "^3.52",
+        "j7mbo/twitter-api-php": "^1.0"
+    }
+}

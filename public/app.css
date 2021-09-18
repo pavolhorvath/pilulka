@@ -1,0 +1,108 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", "SansSerif", "Arial";
+  background: #1a1f2b;
+  color: #eeeeee;
+  height: 100%;
+}
+.app-wrapper {
+  text-align: center;
+}
+.app-wrapper .button {
+  padding: 5px;
+  border-radius: 5px;
+  background: #c0d0f5;
+  cursor: pointer;
+  transition: 0.6s all;
+  color: #1a1f2b;
+  font-weight: bold;
+}
+.app-wrapper .button:hover {
+  background: #ecf1fc;
+}
+.app-wrapper input {
+  background: none;
+  border: #c0d0f5 solid 1px;
+  font-family: courier;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #eeeeee;
+  margin: 0 5px;
+  font-size: large;
+}
+.app-wrapper input:focus {
+  outline: none;
+}
+.app-wrapper .tweet-settings-wrapper {
+  padding: 10px;
+}
+.app-wrapper .tweet-settings-wrapper .key-words-wrapper {
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 550px;
+  background: #2d364b;
+  margin: 5px;
+  text-align: left;
+}
+.app-wrapper .tweet-settings-wrapper .key-words-wrapper .key-word-wrapper {
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  background: #404d6b;
+  margin: 5px;
+}
+.app-wrapper .tweet-settings-wrapper .key-words-wrapper .key-word-wrapper .key-word-remove {
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.6s all;
+}
+.app-wrapper .tweet-settings-wrapper .key-words-wrapper .key-word-wrapper .key-word-remove:hover {
+  color: #a2a2a2;
+}
+.app-wrapper .tweet-settings-wrapper .key-word-input-wrapper,
+.app-wrapper .tweet-settings-wrapper .tweets-count-wrapper,
+.app-wrapper .tweet-settings-wrapper .get-tweets-button-wrapper {
+  margin: 10px;
+}
+.app-wrapper .tweets-wrapper {
+  width: 600px;
+  margin: auto;
+}
+.app-wrapper .tweets-wrapper .tweet-wrapper {
+  background: #2d364b;
+  margin: 5px 20px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+}
+.app-wrapper .tweets-wrapper .tweet-wrapper .tweet-author {
+  display: block;
+  border-bottom: #c0d0f5 solid 1px;
+  font-weight: bold;
+  color: #c0d0f5;
+  margin-bottom: 10px;
+}
+.app-wrapper .tweets-wrapper .tweet-wrapper .tweet-created {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+  color: #8d8d8d;
+  font-style: italic;
+}
+.app-wrapper #loader {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(238, 238, 238, 0.2);
+}
+.app-wrapper #loader img {
+  width: 50px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
